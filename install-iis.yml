@@ -1,0 +1,20 @@
+---
+- name: install the IIS web service
+  hosts: winansible
+
+  tasks:
+    - name: IIS service installed
+      win_feature:
+       name: web-server
+       state: present
+
+    - name: IIS Service started 
+      win_service:
+       name: W3Svc
+       state: started
+
+       
+
+  
+
+
