@@ -1,6 +1,7 @@
 ---
 - name: install the IIS web service
   hosts: winserver
+  become: true
 
   tasks:
     - name: IIS service installed
