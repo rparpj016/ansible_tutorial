@@ -5,11 +5,11 @@
   gather_facts: yes
 
   vars: 
-   source: "report.txt"
-   destination: "Desktop/report.txt"
+   source: "/tmp/foo.txt"
+   destination: C:\Temp\foo.txt
 
   tasks:
-    - name: windows Copy
+    - name: Copy a single file
       ansible.windows.win_copy:
         src: "{{ source }}"  
         dest: "{{ destination }}"
