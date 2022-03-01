@@ -1,0 +1,17 @@
+---
+- name: Example for Windows Copy
+  hosts: winansible
+  become: false
+  gather_facts: yes
+
+  vars: 
+   source: "report.txt"
+   destination: "Desktop/report.txt"
+
+  tasks:
+    - name: windows Copy
+      ansible.windows.win_copy:
+        src: "{{ source }}"  
+        dest: "{{ destination }}"
+
+
