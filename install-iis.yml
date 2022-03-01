@@ -1,6 +1,6 @@
 ---
 - name: install the IIS web service
-  hosts: all
+  hosts: winserver
   
   tasks:
     - name: IIS service installed
