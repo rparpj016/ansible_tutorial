@@ -1,0 +1,15 @@
+---
+- name: install iis web services
+  hosts: winserver
+  gather_facts: true
+
+  tasks:
+  -  name: install IIS
+     ansible.windows.win_feature:
+      name: web_server
+      state: present
+
+
+
+
+
