@@ -1,6 +1,6 @@
 ---
 - name: install the IIS web service
-  hosts: winansible
+  hosts: winserver
 
   tasks:
     - name: IIS service installed
@@ -13,7 +13,7 @@
        name: W3Svc
        state: started
 
-       
+
 
   
 
