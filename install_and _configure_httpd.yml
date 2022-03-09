@@ -1,6 +1,6 @@
 ---
 - name: Install and Configure httpd
-  hosts: rabolinux
+  hosts: linux001
   become: yes
   tasks:
     - name: Install httpd & Firewall
@@ -20,7 +20,7 @@
         name: firewalld
         enable: true
         state: started
-        
-          
+
+
 
 
