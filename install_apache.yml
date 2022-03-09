@@ -4,11 +4,11 @@
   gather_facts: all
   
   tasks:
-  - name: Install Apache 
+  - name: Install httpd 
     yum: 
        name: httpd
        state: latest
-    when: ansible_distribution_version ==  ["CentOS"]
+    when: ansible_distribution ==  'CentOS"
 
   - name: Check for the package
     yum:
