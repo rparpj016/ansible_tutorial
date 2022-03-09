@@ -21,9 +21,9 @@
   - name: List Ansible packages
     yum:
        list: ansible
-       register: result
+    register: result
 
-       
+
       
 
 
