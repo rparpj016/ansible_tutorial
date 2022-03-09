@@ -1,0 +1,14 @@
+---
+- name: Install and Configure HTTPD and FIREWALLD
+  hosts: linux001
+  become: yes
+  tasks:
+    - name: Install and configure httpd and FIREWALLD
+      yum:
+        - httpd
+        - firewalld 
+      state: latest
+
+
+      
+
