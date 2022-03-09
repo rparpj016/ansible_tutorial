@@ -14,13 +14,13 @@
     yum:
        name: httpd
        state: present
-    when: ansible_distribution == "RedHat"
+    when: ansible_facts["os_name"] == "RedHat"
 
   - name: Upgrade all packages
     yum:
        name: '*' 
        state: latest
-    when: ansible_distribution == "RedHat"
+    when: ansible_facts["os_name"] == "RedHat"
 
   - name: List Ansible packages
     yum:
