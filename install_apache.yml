@@ -3,5 +3,6 @@
   become: true
   tasks:
   - name: Install Apache 
-    apt: 
+    yum: 
        name: apache2
+       state: present
