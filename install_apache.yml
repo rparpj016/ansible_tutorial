@@ -6,10 +6,11 @@
   - name: Install Apache 
     yum: 
        name: httpd
-       state: present
+       state: latest
 
   - name: Check for the package
     yum:
        name: httpd
-       list: yes
+       state: present
        
+
