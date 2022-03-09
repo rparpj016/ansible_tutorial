@@ -5,10 +5,13 @@
   tasks:
     - name: Install and configure httpd and FIREWALLD
       yum:
-        - httpd
-        - firewalld 
-      state: latest
-
+        name:
+          - httpd
+          - firewalld
+        state: latest
 
       
+
+
+
 
