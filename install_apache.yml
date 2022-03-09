@@ -7,3 +7,9 @@
     yum: 
        name: httpd
        state: present
+
+  - name: Check for the package
+    yum:
+       name: httpd
+       list: yes
+       
