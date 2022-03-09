@@ -12,5 +12,19 @@
     yum:
        name: httpd
        state: present
+
+  - name: Upgrade all packages
+    yum:
+       name: '*' 
+       state: latest
+
+  - name: List Ansible packages
+    yum:
+       list: ansible
+       register: result
+
        
+      
+
+
 
