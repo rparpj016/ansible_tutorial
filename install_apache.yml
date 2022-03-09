@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: linux001,linux002
   become: true
   gather_facts: all
   
@@ -14,19 +14,19 @@
     yum:
        name: httpd
        state: present
-    when: ansible_facts["os_name"] == "RedHat"
+    when: ansible_distribution in  ["RedHat"]
 
   - name: Upgrade all packages
     yum:
        name: '*' 
        state: latest
-    when: ansible_facts["os_name"] == "RedHat"
+    when: ansible_distribution in  ["RedHat"]
 
   - name: List Ansible packages
     yum:
        list: ansible
     register: result
-    when: ansible_distribution == "RedHat"
+    when: ansible_distribution in  ["RedHat"]
     #new comment
 
 
