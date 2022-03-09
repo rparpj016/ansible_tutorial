@@ -1,6 +1,7 @@
 ---
 - hosts: linux001,linux002
   become: true
+  gather_facts: true
   tasks:
   - name: Install Apache 
     yum: 
