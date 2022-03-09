@@ -1,8 +1,7 @@
 ---
-- hosts: all
+- hosts: linux001,linux002
   become: true
   tasks:
   - name: Install Apache 
     apt: 
        name: apache2
-       
