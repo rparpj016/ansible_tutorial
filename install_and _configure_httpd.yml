@@ -2,21 +2,22 @@
 - name: Install and Configure httpd
   hosts: linux001
   become: yes
+  
   tasks:
-    - name: Install httpd & Firewall
-      yum:
+     - name: Install httpd & Firewall
+       yum:
         - httpd
         - firewalld
-      state: latest
+       state: latest
 
-    - name: Enable and Start httpd
-      services:
+     - name: Enable and Start httpd
+       services:
         name: httpd
         enable: true
         state: started
 
-    - name: Enable and Start firewalld
-      services:
+     - name: Enable and Start firewalld
+       services:
         name: firewalld
         enable: true
         state: started
