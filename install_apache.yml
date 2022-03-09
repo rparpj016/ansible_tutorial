@@ -8,7 +8,7 @@
     yum: 
        name: httpd
        state: latest
-    when: ansible_distribution == "RedHat"
+    when: ansible_facts["os_name"] == "RedHat"
 
   - name: Check for the package
     yum:
