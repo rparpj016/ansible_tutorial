@@ -1,0 +1,6 @@
+---
+- hosts: rabolinux
+  become: true
+  gather_facts: all
+
+  
