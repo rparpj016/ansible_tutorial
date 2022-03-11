@@ -9,6 +9,7 @@
     - name: Install Windows package
       win_package:
         path: d:\TFTPInstaller.exe
+        product_id: '{CF2BEA3C-26EA-32F8-AA9B-331F7E34BA97}'
         state: present
         arguments: /S 
       register: install_result
