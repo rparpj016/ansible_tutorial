@@ -14,6 +14,13 @@
       service:
         name: httpd
         state: started
+
+   -  name: Start FirewallD service
+      service:
+        name: firewalld
+        state: started
+        
+
           
 
 
