@@ -2,24 +2,29 @@
 - name: Install and Configure HTTPD and FIREWALLD
   hosts: linux001
   become: yes
+
+  vars:
+  vars_files:
+   - my_vars.yml
+
   tasks:
    -  name: Install and configure httpd and FIREWALLD
       yum:
         name:
-          - httpd
-          - firewalld
+          - "{{ web_package }}"
+          -  "{{ firewall_package }}"
         state: latest
 
    -  name: Enable and Start httpd
       service:
-        name: httpd
+        name: "{{ web_service }}"
         state: started
 
    -  name: Start FirewallD service
       service:
-        name: firewalld
+        name: "{{ firewall_service }}"
         state: started
-        
+
 
           
 
