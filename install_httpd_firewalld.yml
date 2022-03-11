@@ -3,13 +3,13 @@
   hosts: linux001
   become: yes
   tasks:
-    - name: Install and configure httpd and FIREWALLD
+  -   name: Install and configure httpd and FIREWALLD
       yum:
         name:
           - httpd
           - firewalld
         state: latest
-        
+
 
       
 
