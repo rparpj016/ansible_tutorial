@@ -5,7 +5,7 @@
 
   vars:
   vars_files:
-   - vars/my_vars.yml
+   - vars.yml
 
   tasks:
    -  name: Install and configure httpd and FIREWALLD
