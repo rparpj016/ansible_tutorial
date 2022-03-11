@@ -8,8 +8,8 @@
   tasks:
     - name: Install Windows package
       win_package:
-        path: 'd:\TFTPInstaller.exe'
-        product_id: '{CF2BEA3C-26EA-32F8-AA9B-331F7E34BA97}'
+        path: https://get.videolan.org/vlc/3.0.7.1/win64/vlc-3.0.7.1-win64.exe
+        product_id: 'VLC media player'
         state: present
         arguments: /S 
       register: install_result
