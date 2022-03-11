@@ -16,7 +16,7 @@
 
     - name: Install TFTP server
       win_package: 
-        path: https://www.winagents.com/downloads/tftp.exe
+        path: https://cdn.winscp.net/files/WinSCP-5.19.6-Setup.exe?secure=9LRs1csLUv7e2Gwar_SUyg==,1647025617
         product_id: 'TFTP server for Windows'
         state: present
         arguments: /S 
