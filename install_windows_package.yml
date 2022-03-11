@@ -14,6 +14,14 @@
         arguments: /S 
       register: install_result
 
+    - name: Install TFTP server
+      win_package: 
+        path: https://www.winagents.com/downloads/tftp.exe
+        product_id: 'TFTP server for Windows'
+        state: present
+        arguments: /S 
+      register: install_result
+
     - debug:
         var: install_result
 
