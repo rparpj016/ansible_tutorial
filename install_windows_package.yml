@@ -1,0 +1,24 @@
+---
+- name: Install and Configure Windows package
+  hosts: winserver
+  gather_facts: true
+
+  vars:
+
+  tasks:
+    - name: Install Windows package
+      win_package:
+        path: d:\TFTPInstaller.exe
+        state: present
+        arguments: /S 
+      register: install_result
+
+    - debug:
+        var: install_result
+
+
+
+       
+
+
+
