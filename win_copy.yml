@@ -6,8 +6,8 @@
   tasks:
     - name: Copy a Windows File
       win_copy:
-        src: c:\readme.txt
-        dest: c:\temp\
+        src: 'c:\readme.txt'
+        dest: 'c:\temp\''
         remote_src: yes
 
 
