@@ -1,6 +1,6 @@
 ---
 - name: This is an Example of Windows Copy File 
-  hosts: localhost, winserver
+  hosts:  winserver
   gather_facts: true
 
   tasks:
@@ -9,5 +9,5 @@
         src: c:\readme.txt
         dest: c:\temp\
         remote_src: yes
-        
+
 
