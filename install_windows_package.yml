@@ -17,9 +17,9 @@
     - name: Start a Windows service
       win_service:
         name: appmgmt
-        state: present
+        state: started
 
-        
+
 
 
 
