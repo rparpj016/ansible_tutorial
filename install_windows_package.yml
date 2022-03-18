@@ -21,7 +21,7 @@
         
     - name: install MSI package
       win_package:
-         product_id: 'blah blah'
+         #product_id: 'blah blah'
          state: present
       register: install_results
 
