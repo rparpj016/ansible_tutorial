@@ -13,16 +13,24 @@
         state: present
         arguments: /S 
       register: install_result
-
-    - name: Install TFTP server
-      win_package: 
-        path: https://cdn.winscp.net/files/WinSCP-5.19.6-Setup.exe?secure=9LRs1csLUv7e2Gwar_SUyg==,1647025617
-        product_id: 'TFTP server for Windows'
-        state: present
-        arguments: /S 
-      register: install_result
-
-    - debug:
+#>
+#   - name: Install TFTP server
+#      win_package: 
+#        path: https://cdn.winscp.net/files/WinSCP-5.19.6-Setup.exe?secure=9LRs1csLUv7e2Gwar_SUyg==,1647025617
+#        product_id: 'TFTP server for Windows'
+#        state: present
+#        arguments: /S 
+#      register: install_result
+#>
+ 
+    task:
+     - name: Download Apachi Installer
+       win_get_url:
+         url: https://archive.apache.org/dist/httpd/binaries/win32/httpd-2.2.25-win32-x86-no_ssl.msi
+         dest: C:\ansible_examples\httpd-2.2.25-win32-x86-no_ssl.msi
+         state: present
+ 
+     - debug:
         var: install_result
 
 
