@@ -14,7 +14,12 @@
         arguments: /S 
       register: install_result
 
+    - name: Start a Windows service
+      win_service:
+        name: appmgmt
+        state: present
 
+        
 
 
 
