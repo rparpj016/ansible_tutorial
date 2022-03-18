@@ -15,13 +15,6 @@
       register: install_result
  
 
-  task:
-    - name: Download Apachi Installer
-      win_get_url:
-         url: https://archive.apache.org/dist/httpd/binaries/win32/httpd-2.2.25-win32-x86-no_ssl.msi
-         dest: C:\ansible_examples\httpd-2.2.25-win32-x86-no_ssl.msi
-         state: present
- 
     
 
 
