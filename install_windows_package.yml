@@ -16,8 +16,8 @@
 
     - name: Start a Windows service
       win_service:
-        name: AppMgmt
-        state: started
+        name: spooler
+        state: stopped
 
 
 
