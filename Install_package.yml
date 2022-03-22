@@ -1,6 +1,6 @@
 ---
 - name: Install a Windows Package and Print the Results
-  hosts: rabowindows
+  hosts: localhost, rabowindows
   gather_facts: true
 
   vars:
