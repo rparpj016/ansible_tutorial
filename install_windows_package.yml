@@ -25,7 +25,9 @@
         name: "{{ user_name }}"
         password: jackintheb00x
         state: present
-        #
+        groups:
+          - users
+        
         
 
 
