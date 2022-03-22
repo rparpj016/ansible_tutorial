@@ -4,6 +4,7 @@
   gather_facts: true
 
   vars:
+    user_name: 'James Clerk'
 
   tasks:
     - name: Install Windows package
@@ -18,6 +19,14 @@
       win_service:
         name: spooler
         state: stopped
+
+    - name: Create a user called 'James
+      win_user:
+        name: "{{ user_name }}"
+        password: jackintheb00x
+        state: present
+        
+
 
 
 
