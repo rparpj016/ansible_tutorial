@@ -1,0 +1,26 @@
+---
+- name: Install a Windows Package and Print the Results
+  hosts: rabowindows
+  gather_facts: true
+
+  vars:
+
+
+  tasks:
+    - name: Copy Install Package
+      win_copy:
+        src: files\7z1900-x64.exe
+        dest: c:\7z1900-x64.exe
+
+    - name: Install the Package
+      win_package: 
+        path: c:\7z1900-x64.exe
+        state: present
+        product_id: 7-zip
+        arguments: /S
+      register: install_results
+
+    - debug:
+        var: install_result
+
+        
