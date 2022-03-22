@@ -9,7 +9,7 @@
   tasks:
     - name: Copy Install Package
       win_copy:
-        src: files\7z1900-x64.exe
+        src: /home/maxim/files\7z1900-x64.exe
         dest: c:\7z1900-x64.exe
 
     - name: Install the Package
@@ -23,4 +23,4 @@
     - debug:
         var: install_result
 
-        
+
