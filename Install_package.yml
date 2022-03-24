@@ -33,6 +33,7 @@
       win_copy:
         src: C:\temp
         dest: c:\sites\variables
+        remote_src: yes
 
 
 
