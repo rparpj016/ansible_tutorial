@@ -23,7 +23,17 @@
       win_file:
         path: C:\sites\logs
         state: Directory
-        
+
+    - name: Site Directory is created
+      win_copy:
+        path: C:\sites\variables
+        state: directory
+
+    - name: HTML page for the site
+      win_copy:
+        src: C:\temp
+        dest: c:\sites\variables
+
 
 
 
