@@ -12,8 +12,13 @@
     
     - name: IIS and .Net 4.5 are installed
       ansible.windows.win_feature:
-        name: web-server
+        name: 
+          - web-server
+          - NET-Framework-Core
+          - Web-Asp-Net45
         state: present
+        include_management_tools: true
+        
 
 
 
