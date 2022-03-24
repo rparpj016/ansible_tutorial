@@ -25,7 +25,7 @@
         state: Directory
 
     - name: Site Directory is created
-      win_copy:
+      win_file:
         path: C:\sites\variables
         state: directory
 
