@@ -16,9 +16,15 @@
           - web-server
           - NET-Framework-Core
           - Web-Asp-Net45
-        state: present
         include_management_tools: true
+        state: present
         
+    - name: Logs Directory is created
+      win_file:
+        path: C:\sites\logs
+        state: Directory
+        
+
 
 
 
